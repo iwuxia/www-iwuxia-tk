@@ -1,0 +1,29 @@
+site:
+    title: "iWuXia  "
+    subtitle: "天涯明月刀玩家社区"
+    limit: 10
+    theme: theme
+    lang: zh
+    url: "http://www.iwuxia.tk"
+    comment: username
+    logo: "-/images/wuxia_144.png"
+    # link: "{category}/{year}/{month}/{day}/{title}.html"
+    # root: "/blog"
+
+authors:
+    me:
+        name: "admin"
+        intro: "iWuXia admin"
+        avatar: "-/images/wuxia_144.png"
+
+build:
+    # output: "public"
+    port: 8000
+    # Copied files to public folder when build
+    copy:
+        - "source/images"
+    # Excuted command when use 'ink publish'
+    publish: |
+        git add . -A
+        git commit -m "update"
+        git push origin
