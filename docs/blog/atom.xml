@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>iWuXia  </title>
   <id>http://www.iwuxia.tk</id>
-  <updated>2017-06-19T12:59:13+08:00</updated>
+  <updated>2017-06-21T04:41:44+08:00</updated>
   <subtitle>天涯明月刀玩家社区</subtitle>
   <link href="http://www.iwuxia.tk"></link>
   <author>
@@ -23,6 +23,16 @@
     <id>tag:www.iwuxia.tk,2017-06-01:/how-to-publish-home-page.html</id>
     <content type="html">&lt;p&gt;天涯明月刀玩家社区，点击查看如何发布主页&lt;/p&gt;&#xA;</content>
     <link href="http://www.iwuxia.tk/how-to-publish-home-page.html"></link>
+    <author>
+      <name>admin</name>
+    </author>
+  </entry>
+  <entry>
+    <title>尽量不要使用出师功能</title>
+    <updated>2017-06-20T18:00:00+08:00</updated>
+    <id>tag:www.iwuxia.tk,2017-06-20:/jin-liang-bu-shi-yong-chu-shi.html</id>
+    <content type="html">&lt;p&gt;最好不要点出师，师徒格子不够时建议点取消师徒关系。&lt;/p&gt;&#xA;</content>
+    <link href="http://www.iwuxia.tk/jin-liang-bu-shi-yong-chu-shi.html"></link>
     <author>
       <name>admin</name>
     </author>
