@@ -13,25 +13,25 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iWuXia  ">
 <meta name="twitter:description" content="天涯明月刀玩家社区">
-<meta name="twitter:image:src" content="http://www.iwuxia.tk/blog/images/wuxia_144.png">
+<meta name="twitter:image:src" content="http://www.iwuxia.tk/images/wuxia_144.png">
 
 <meta property="og:url" content="http://www.iwuxia.tk">
 <meta property="og:title" content="iWuXia  ">
 <meta property="og:description" content="天涯明月刀玩家社区">
 <meta property="og:site_name" content="iWuXia  ">
-<meta property="og:image" content="http://www.iwuxia.tk/blog/images/wuxia_144.png">
+<meta property="og:image" content="http://www.iwuxia.tk/images/wuxia_144.png">
 <meta property="og:type" content="website">
 <meta name="robots" content="noodp">
 
 <meta itemprop="name" content="iWuXia  ">
 <meta itemprop="description" content="天涯明月刀玩家社区">
-<meta itemprop="image" content="http://www.iwuxia.tk/blog/images/wuxia_144.png">
+<meta itemprop="image" content="http://www.iwuxia.tk/images/wuxia_144.png">
 
 <link rel="canonical" href="http://www.iwuxia.tk">
 
-<link rel="shortcut icon" href="/blog/favicon.png">
-<link rel="apple-itouch-icon" href="/blog/favicon.png">
-<link rel="stylesheet" href="/blog/bundle/index.css">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-itouch-icon" href="/favicon.png">
+<link rel="stylesheet" href="/bundle/index.css">
 <script type="text/javascript">
     var timeSinceLang = {
         year: '年前',
@@ -41,7 +41,29 @@
         minute: '分钟前',
         second: '秒前'
     };
-    var root = '\/blog';
+    var root = '';
+</script>
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
 </script>
 
 
@@ -53,22 +75,22 @@
     <body>
         <article class="container">
             <header class="header-wrap">
-  <a class="index" href="/blog/">
-    <img class="logo" src="/blog/images/wuxia_144.png" />
+  <a class="index" href="/">
+    <img class="logo" src="/images/wuxia_144.png" />
     iWuXia  
   </a>
   <ul class="menu">
-      <li class="menu-item"><a href="/blog/archive.html">归档</a></li>
-      <li class="menu-item"><a href="/blog/tag.html">标签</a></li>
-      <li class="menu-item"><a href="/blog/atom.xml">订阅</a></li>
+      <li class="menu-item"><a href="/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/tag.html">标签</a></li>
+      <li class="menu-item"><a href="/atom.xml">订阅</a></li>
   </ul>
 </header>
 
             <article class="main article">
                 <h1 class="title">天涯明月刀玩家社区主页发布方式</h1>
                 <section class="info">
-                    <span class="avatar" style="background-image: url(/blog/images/wuxia_144.png);"></span>
-                    <a class="name" href="/blog/about.me.html">admin</a>
+                    <span class="avatar" style="background-image: url(/images/wuxia_144.png);"></span>
+                    <a class="name" href="/about.me.html">admin</a>
                     
                     <span class="date" data-time="1496311200"><span class="from"></span></span>
                     
@@ -79,21 +101,21 @@
 <p>联系iwuxia管理员，发布页面。</p>
 </article>
                 <section class="author">
-                    <div class="avatar" style="background-image: url(/blog/images/wuxia_144.png);"></div>
-                    <a class="name" href="/blog/about.me.html">admin</a>
+                    <div class="avatar" style="background-image: url(/images/wuxia_144.png);"></div>
+                    <a class="name" href="/about.me.html">admin</a>
                     <div class="intro">iWuXia admin</div>
                 </section>
                 <section class="recommend">
                     
                     <section class="nav prev more">
                         <div class="head">上篇文章</div>
-                        <a class="link" href="/blog/fang-dao-fang-pian-zhi-nan.html">防盗防骗指南</a>
+                        <a class="link" href="/fang-dao-fang-pian-zhi-nan.html">防盗防骗指南</a>
                     </section>
                     
                     
                     <section class="nav next more">
                         <div class="head">下篇文章</div>
-                        <a class="link" href="/blog/jin-liang-bu-shi-yong-chu-shi.html">尽量不要使用出师功能</a>
+                        <a class="link" href="/jin-liang-bu-shi-yong-chu-shi.html">尽量不要使用出师功能</a>
                     </section>
                     
                 </section>
@@ -117,9 +139,10 @@
             document.write(new Date().getFullYear());
         </script>
     </span>
-    <span class="publish">Powered by <a href="http://www.chole.io/" target="_blank">Ink</a></span>
+    <span class="publish">Powered by <a href="http://www.chole.io/" target="_blank">Ink</a><script language="javascript" type="text/javascript" src="//js.users.51.la/19217818.js"></script>
+<noscript><a href="//www.51.la/?19217818" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="//img.users.51.la/19217818.asp" style="border:none" /></a></noscript></span>
 </footer>
 
-        <script src="/blog/bundle/index.js"></script>
+        <script src="/bundle/index.js"></script>
     </body>
 </html>
